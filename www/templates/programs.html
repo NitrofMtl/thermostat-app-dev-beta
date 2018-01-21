@@ -1,0 +1,61 @@
+
+
+<ion-view view-title="programs">
+  <ion-content padding="true" >      
+    <ion-slides  options="options" slider="data.slider">
+      <ion-slide-page ng-repeat="alarm in alarms">
+        <ion-content>
+          <div class="list">
+            <h2><center>Program #{{$index}}</center></h2>
+            <br/>
+
+            <a class="item no-padding">        
+              <button class="button button-stable" ng-click="switchAlarm(switch, $index)" ng-model="alarm.switch" style= "margin: 0 50px 0 50px">
+                {{alarm.switch}}
+              </button>
+              <button class="button button-stable button-positive" ng-click="alarmsClk(alarm, $index)">
+                OK
+              </button>
+            </a>
+
+            <div class="list">
+              <label class="item item-input item-select">
+                <div class="input-label" style="font-size: 20px;">
+                  Mode
+                </div>
+                <select style="font-size: 20px;">
+                  <option ng-repeat="weekType in weekTypes">{{weekType}}</option>
+                  <option selected> {{alarm.type}}</option>
+                </select>
+              </label>
+
+
+              <div class="timer-box">
+                <label>          
+                  <span class="timer-item">Time </span>
+                  <input type="tel" class="timer-item2" name="hour" min="0" max="23" ng-model="alarm.hour">
+                  <span class="timer-item"> : </span>
+                  <input  type="tel" class="timer-item2" name="minute" min="0" max="59" ng-model="alarm.minute">
+                </label>
+              </div>
+
+              <div class="control_box">                
+                <div ng-repeat="setpoint in alarm.setpoints track by $index">                              
+                  <div class= "timer-box">
+                    <label>
+                      <span class= "timer-item">{{chName[$index]}}</span>
+
+                      <input type="number" class= "timer-item" lang="en-CA" name="room" min="5" max="35" step="0.5" ng-model="alarm.setpoints[$index]">
+                      <span class= "timer-item">&#186;C</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </ion-content>
+      </ion-slide-page>
+    </ion-slides>    
+  </ion-content>
+</ion-view>

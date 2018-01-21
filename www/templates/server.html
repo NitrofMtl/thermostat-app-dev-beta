@@ -1,0 +1,23 @@
+
+<ion-view view-title="server">
+  <ion-content>
+  		<br/>
+  		<center>
+	  		<div class="content-strech-box">
+		        <div class="timer-box">
+		          <label>
+		            <span class="timer-item">Arduino Server Adresse</span>
+		            <input class="timer-item" type="url" name="serverAdress" ng-model="arduinoServerUrl">
+		          </label>
+		        </div>
+		        <br/>
+
+	            <button class="button button-dark button-block padding " ng-click="serverClk(arduinoServerUrl)">ok
+	            </button>
+	            <br/>
+	            <br/>
+	            <span class="errorMsg">{{errorMsg}}</span>
+	        </div>
+       </center>
+  </ion-content>
+</ion-view>

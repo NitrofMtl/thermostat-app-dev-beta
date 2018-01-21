@@ -1,0 +1,43 @@
+<ion-view view-title="home">
+  <ion-content ng-controller="temperatureCtrl">
+    <div ng-init="init()"></div>
+    <ion-slides options="options" slider="data.slider">
+      <ion-slide-page ng-repeat="channel in channels">
+        <ion-content>
+          <div class="list">
+            <h2><center>canal# {{channel.canal}}</center></h2>
+            <br/>
+            <center>
+              <button class="button button-stable" ng-click="switchChannel(channel, channel.canal)" ng-model="channel.status">
+                {{channel.status}}
+              </button>
+            </center>
+            <div class="list">
+              <label class="item item-input">
+                <input type="text" style="text-align:center; font-size: 25px" placeholder="Channel name" ng-model="channel.name" ng-focus="stopRefresh()" ng-blur="restartRefresh()">
+              </label>
+            </div>
+            <h4><center>
+            <span class="Ainput" ><h3>{{channel.temperature}}&#186;C</h3></span>
+            </center></h4>
+            <h3><center>Setpoint= {{channel.setPoint}}</center></h3>
+            <br>
+            <div class="item range range-positive">
+              <i class="icon ion-minus-round"></i>
+              <input type="range" name="setpoint" min="5" max="30" step="0.5" value="33" ng-model="channel.setPoint" ng-focus="stopRefresh()" ng-blur="restartRefresh()">
+              <i class="icon ion-plus-round"></i>
+            </div>
+            <centrer>
+              <button class="button button-dark button-block padding " ng-click="channelsClk(channel, channel.setPoint)">ok</button>
+            </centrer>
+            <h3>
+              <centrer>
+                  <span class="AoutputChannel">{{channel.percentOut}}%</span>
+              </centrer>
+            </h3>
+          </div>
+        </ion-content>
+      </ion-slide-page>
+    </ion-slides>
+  </ion-content>
+</ion-view>

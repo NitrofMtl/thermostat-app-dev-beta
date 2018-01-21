@@ -1,0 +1,161 @@
+/* Empty. Add your own CSS if you like */
+	overflow-y: auto !important;
+}
+
+
+.slide-zoom{
+  height:100%;
+  overflow-y: auto;
+}
+
+
+.subtitle { /*configs page*/
+      background-color: #82BAC0;
+      width: 100%;
+      padding: 10px 0;
+      font-size: 180%;
+      margin: 0 0 10px 0;
+      font-family: "MS Tahoma", Georgia;
+      color: #131E61;
+    
+}
+
+.control_box{  /*configs page*/
+      background:#D4DAE8;      
+	  vertical-align: top;
+      margin: 3px 20px 20px 20px;
+      border: 3px solid blue;
+      padding: 0 10px 15px 5px;
+      /*max-height: 450px;*/
+      border-radius: 10px;
+      font-size: 20px;
+}
+
+.flex-inline{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+input[type="tel"].timer-item{
+	-webkit-appearance:none;
+
+}
+
+.input-temp{
+	border: 5px solid #D4DAE8;
+	padding: 0px;
+}
+
+.item-temp{
+
+	height: 40px;
+	align-content: center;
+	font-size: 20px;
+}
+
+.input-temp{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.item-temp{
+	margin: 0;
+	width: 80px;
+	padding: 20px;
+}
+
+.item:nth-child(2){
+	padding: 5px;
+	width: 80px;
+}
+
+.timer-box{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.timer-box{
+	display: flex;
+	justify-content: flex-end
+	border: 5px;
+	padding: 0px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+
+
+.timer-item{
+	justify-content: flex-end;
+	margin: 0;
+	width: 80px;
+	height: 25px;
+	padding: 20px;
+	align-content: flex-end;
+	font-size: 20px;
+	
+}
+
+input[type="number"].timer-item{
+	display: inline-block;
+	margin: 0;
+	width: 90px;
+	height: 25px;
+	padding: 20px;
+	align-content: flex-end;
+	font-size: 20px;
+	border: 5px solid #D4DAE8;
+}
+
+
+
+input[type="tel"].timer-item{
+	display: inline-block;
+	margin: 0;
+	width: 80px;
+	height: 25px;
+	padding: 20px;
+	align-content: center;
+	font-size: 20px;
+	border: 5px solid #D4DAE8;
+}
+
+input[type="tel"].timer-item2{
+	display: inline-block;
+	margin: 0;
+	width: 80px;
+	height: 25px;
+	padding: 20px;
+	align-content: center;
+	font-size: 20px;
+	border: 5px;
+}
+
+input[type="url"].timer-item {
+	display: inline-block;
+	margin: 0;
+	width: 300px;
+	height: 25px;
+	padding: 20px;
+	align-content: center;
+	font-size: 20px;
+	border: 5px solid #D4DAE8;
+	-vertical-align: middle;
+}
+
+.content-strech-box {
+	display: flex;
+	border: 25px;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+.errorMsg {
+	font-size: 35px;
+	color: red;
+	line-height: 90%;
+	margin: 10px;
+}

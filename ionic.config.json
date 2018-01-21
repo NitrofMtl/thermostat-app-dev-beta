@@ -1,0 +1,12 @@
+{
+  "name": "thermostat_2.1",
+  "app_id": "",
+  "integrations": {},
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
